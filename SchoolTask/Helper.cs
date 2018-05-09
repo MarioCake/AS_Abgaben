@@ -23,7 +23,7 @@ namespace School
                         lastValue = values[currentIndex - 1];
 
                     if (actionForEachValue == null || actionForEachValue(currentIndex, lastValue))
-                        TryRepeatedConsoleParse(out values[currentIndex], tryParse, validationFunction, errorMessage);
+                        TryRepeatedConsoleParse(out values[currentIndex], errorMessage, validationFunction, tryParse);
 
                     amount--;
                 } while (amount > 0);
@@ -36,15 +36,15 @@ namespace School
             }
         }
 
-        public static void TryRepeatedConsoleParse<T>(out T output, TryParse<T> tryParse = null, Predicate<T> validationFunction = null, string errorMessage = null)
+        public static void TryRepeatedConsoleParse<T>(out T output, string errorMessage = null, Predicate<T> validationFunction = null, TryParse<T> tryParse = null)
         {
-            while (!TryGenericParse(Console.ReadLine(), out output, tryParse, validationFunction, errorMessage));
+            while (!TryGenericParse(Console.ReadLine(), out output, errorMessage, validationFunction, tryParse));
         }
 
         public delegate bool ActionForEachValue<T>(int currentIndex, T lastValue = default(T));
         public delegate bool TryParse<T>(string input, out T output);
 
-        public static bool TryGenericParse<T>(string input, out T output, TryParse<T> tryParse = null, Predicate<T> validationFunction = null, string errorMessage = null)
+        public static bool TryGenericParse<T>(string input, out T output, string errorMessage = null, Predicate<T> validationFunction = null, TryParse <T> tryParse = null)
         {
             if (validationFunction == null)
                 validationFunction = variable => true;

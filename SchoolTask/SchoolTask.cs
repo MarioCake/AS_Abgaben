@@ -19,6 +19,11 @@ namespace School
 
         protected abstract void Main(string[] args);
 
+        public static void LoadAssembly(string[] args)
+        {
+            LoadAssembly(Assembly.GetCallingAssembly(), args);
+        }
+
         public static void LoadAssembly(Assembly assembly, string[] args)
         {
             IEnumerable<Type> schoolTaskTypes = assembly.GetTypes().Where(type => type.BaseType == typeof(SchoolTask));
