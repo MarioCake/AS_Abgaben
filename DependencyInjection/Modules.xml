@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<Services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Service Id="Test1" Namespace="DependencyInjection" DisplayName="Test001" />
+  <Service Id="Test2" Namespace="DependencyInjection" DisplayName="KeinTestMehr"/>
+  <Service Id="Other" Namespace="DependencyInjection.OtherModules" DisplayName="SteckErstmalDenSteckerRein"/>
+</Services>
