@@ -1,14 +1,16 @@
 ﻿using School;
 using System;
-using System.Linq;
+using static School.Helper;
 
-namespace Arrays
+namespace Methoden
 {
     class Program
     {
         static void Main(string[] args)
         {
+
             SchoolTask.LoadAssembly(typeof(Program).Assembly, args);
+
         }
     }
 }

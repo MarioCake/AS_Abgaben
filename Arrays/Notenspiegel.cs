@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using static School.Helper;
 using static System.Environment;
@@ -40,13 +41,16 @@ namespace Arrays
                 summeNotenpunkte += notenspiegel[i] * (i + 1);
             }
             double varianzSumme = 0;
+            double varianz2Summe = 0;
 
             double notendurchschnitt = 1d * summeNotenpunkte / summeNotenanzahl;
+            double durchschnitt = notenspiegel.Average();
             foreach (int note in notenspiegel)
             {
-                varianzSumme += Math.Pow(note - notendurchschnitt, 2);
+                varianz2Summe += Math.Pow(note - durchschnitt, 2);
             }
-            double standardAbweichung = Math.Sqrt(varianzSumme / summeNotenanzahl);
+            double standardAbweichung = Math.Sqrt(varianzSumme / durchschnitt);
+
 
             Console.WriteLine("{0}{0}Notendurchschnitt: \t{1}", NewLine, notendurchschnitt);
             Console.WriteLine("Standardabweichung: \t{0}", standardAbweichung);
