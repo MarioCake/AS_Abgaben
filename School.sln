@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "Arrays\Arrays.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Methoden", "Methoden\Methoden.csproj", "{60161D7F-F339-4719-B0A7-A4198E91BB61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuesStacks", "QueuesStacks\QueuesStacks.csproj", "{F17BE438-5D57-4E82-856C-CA34BCB6BBB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuesStacks", "QueuesStacks\QueuesStacksLists.csproj", "{F17BE438-5D57-4E82-856C-CA34BCB6BBB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
