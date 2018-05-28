@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EVA", "EVA\EVA.csproj", "{A4912547-A061-455B-85C6-8C2ED800E8CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wiederholungen", "Wiederholungen\Wiederholungen.csproj", "{B213FE67-68C5-41F0-850B-FC35CA67EEF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Battleships", "Battleships\Battleships.csproj", "{B213FE67-68C5-41F0-850B-FC35CA67EEF6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auswahlstrukturen", "Auswahlstrukturen\Auswahlstrukturen.csproj", "{06DC2BE1-6B3F-496B-AB9E-560A6870ECB3}"
 EndProject
