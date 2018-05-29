@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EVA", "EVA\EVA.csproj", "{A4912547-A061-455B-85C6-8C2ED800E8CA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Battleships", "Battleships\Battleships.csproj", "{B213FE67-68C5-41F0-850B-FC35CA67EEF6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auswahlstrukturen", "Auswahlstrukturen\Auswahlstrukturen.csproj", "{06DC2BE1-6B3F-496B-AB9E-560A6870ECB3}"
 EndProject
@@ -17,9 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Methoden", "Methoden\Method
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueuesStacksLists", "QueuesStacks\QueuesStacksLists.csproj", "{F17BE438-5D57-4E82-856C-CA34BCB6BBB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{3C776BA3-F900-45CB-A1E6-C682EAF66CC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{3C776BA3-F900-45CB-A1E6-C682EAF66CC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomForeach", "RandomForeach\RandomForeach.csproj", "{17BBAFD2-F2B0-4121-AA66-75E7128AC07B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomForeach", "RandomForeach\RandomForeach.csproj", "{17BBAFD2-F2B0-4121-AA66-75E7128AC07B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Battleships", "Battleships\Battleships.csproj", "{DBEFE658-0603-4A55-A23F-400F74BD45A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projekt", "Projekt\Projekt.csproj", "{64013CEB-758C-4970-A8BC-B2C962C63480}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +33,6 @@ Global
 		{A4912547-A061-455B-85C6-8C2ED800E8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4912547-A061-455B-85C6-8C2ED800E8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4912547-A061-455B-85C6-8C2ED800E8CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B213FE67-68C5-41F0-850B-FC35CA67EEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B213FE67-68C5-41F0-850B-FC35CA67EEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B213FE67-68C5-41F0-850B-FC35CA67EEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B213FE67-68C5-41F0-850B-FC35CA67EEF6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{06DC2BE1-6B3F-496B-AB9E-560A6870ECB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{06DC2BE1-6B3F-496B-AB9E-560A6870ECB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06DC2BE1-6B3F-496B-AB9E-560A6870ECB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +61,14 @@ Global
 		{17BBAFD2-F2B0-4121-AA66-75E7128AC07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17BBAFD2-F2B0-4121-AA66-75E7128AC07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17BBAFD2-F2B0-4121-AA66-75E7128AC07B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBEFE658-0603-4A55-A23F-400F74BD45A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEFE658-0603-4A55-A23F-400F74BD45A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEFE658-0603-4A55-A23F-400F74BD45A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEFE658-0603-4A55-A23F-400F74BD45A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64013CEB-758C-4970-A8BC-B2C962C63480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64013CEB-758C-4970-A8BC-B2C962C63480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64013CEB-758C-4970-A8BC-B2C962C63480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64013CEB-758C-4970-A8BC-B2C962C63480}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
