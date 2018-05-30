@@ -1,9 +1,11 @@
-﻿class Popup extends BasicViewModel {
+﻿class Popup extends BaseViewModel {
 
-    static upMoveRange = 200;
-    static sideMoveRange = 50;
+    static get upMoveRange() { return 200; }
+    static get sideMoveRange() { return 50; }
 
     constructor(text, minPosition, maxPosition) {
+        super();
+
         this.text = ko.observable(text);
 
         let randomX = Math.random() * (maxPosition.x - minPosition.x) + minPosition.x;
@@ -11,12 +13,10 @@
 
         this.position = ko.observable({ x: randomX, y: randomY });
 
-        runAnimation();
+        this.runAnimation();
     }
 
     runAnimation() {
-        addElement();
-
         this.css({
             "popup-hide": false
         });
@@ -24,8 +24,10 @@
             "popup-hide": true
         });
 
-        this.position().y -= Math.random() * upMoveRange + upMoveRange / 4;
-        this.position().x += Math.random() * sideMoveRange - sideMoveRange / 2;
+        this.position().y -= Math.random() * Popup.upMoveRange + Popup.upMoveRange / 4;
+        this.position().x += Math.random() * Popup.sideMoveRange - Popup.sideMoveRange / 2;
+
+        this.position.notifySubscribers();
     }
 
 }
