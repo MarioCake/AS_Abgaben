@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Battleships", "Battleships\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projekt", "Projekt\Projekt.csproj", "{64013CEB-758C-4970-A8BC-B2C962C63480}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookiClickerEF", "CookiClickerEF\CookiClickerEF.csproj", "{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{64013CEB-758C-4970-A8BC-B2C962C63480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64013CEB-758C-4970-A8BC-B2C962C63480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64013CEB-758C-4970-A8BC-B2C962C63480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

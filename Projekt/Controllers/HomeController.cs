@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using CookiClickerEF.Context;
+using CookiClickerEF.Models;
 using Microsoft.AspNetCore.Mvc;
 using Projekt.Models;
 
@@ -25,6 +27,11 @@ namespace Projekt.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult SaveCookies(GameState state)
+        {
+            return View();
         }
     }
 }
