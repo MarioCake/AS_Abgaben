@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomForeach", "RandomFore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Battleships", "Battleships\Battleships.csproj", "{DBEFE658-0603-4A55-A23F-400F74BD45A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projekt", "Projekt\Projekt.csproj", "{64013CEB-758C-4970-A8BC-B2C962C63480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projekt", "Projekt\Projekt.csproj", "{64013CEB-758C-4970-A8BC-B2C962C63480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookiClickerEF", "CookiClickerEF\CookiClickerEF.csproj", "{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookiClickerEF", "CookiClickerEF\CookiClickerEF.csproj", "{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entscheidungstabellen", "Entscheidungstabellen\Entscheidungstabellen.csproj", "{0FF0B5DD-2C8D-4CFC-9663-DF29B1E1E4E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F08FBE6F-FDDD-40E4-83A9-6AE750E06D7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FF0B5DD-2C8D-4CFC-9663-DF29B1E1E4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FF0B5DD-2C8D-4CFC-9663-DF29B1E1E4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FF0B5DD-2C8D-4CFC-9663-DF29B1E1E4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FF0B5DD-2C8D-4CFC-9663-DF29B1E1E4E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
