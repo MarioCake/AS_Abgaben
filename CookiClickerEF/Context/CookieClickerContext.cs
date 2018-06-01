@@ -15,5 +15,6 @@ namespace CookiClickerEF.Context
         }
 
         public DbSet<GameState> GameStates { get; set; }
+        public DbSet<Upgrade> Upgrades { get; set; }
     }
 }
