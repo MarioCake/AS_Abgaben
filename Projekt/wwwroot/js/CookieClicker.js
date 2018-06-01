@@ -13,8 +13,9 @@
         this.amountCookies(this.amountCookies() + this.cookieClickAmount);
 
         let newPopup = new Popup(this.cookieClickAmount + "+", { x: 0, y: 0 }, { x: 200, y: 200 });
+        
         this.popups.push(newPopup);
 
-        setTimeout(this.popups.remove.bind(popups, popup), 2500);
+        setTimeout(this.popups.remove.bind(this.popups, newPopup), 2000);
     }
 }

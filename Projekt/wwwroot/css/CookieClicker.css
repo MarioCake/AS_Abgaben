@@ -19,4 +19,20 @@
     height: 250px;
     background-color: sandybrown;
     cursor: pointer;
+    position: relative;
+}
+
+.popup-show, .popup-hide {
+    position: absolute;
+    transition: top 2s, left 2s, opacity 2s;
+    transition-timing-function: cubic-bezier(0, 0.44, 1, 1)
+}
+
+
+.popup-show{
+    opacity: 1;
+}
+
+.popup-hide {
+    opacity: 0;
 }

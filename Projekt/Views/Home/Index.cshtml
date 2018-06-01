@@ -4,14 +4,16 @@
 
 <div class="cookie-wrapper">
     <div class="cookie-amount" data-bind="text: amountCookies"></div>
-    <div class="cookie" data-bind="click: addCookie"></div>
-    <div class="popups" data-bind="foreach: popups">
-
+    <div class="cookie" data-bind="click: addCookie">
+        <div class="popups" data-bind="foreach: popups">
+            <div data-bind="css: css, text: text, style: style"></div>
+        </div>
     </div>
+
 </div>
 
 @section scripts{
     <script>
         ko.applyBindings(new CookieViewModel());
     </script>
-}s
+}

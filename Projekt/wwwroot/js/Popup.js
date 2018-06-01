@@ -17,17 +17,31 @@
     }
 
     runAnimation() {
+
+
         this.css({
-            "popup-hide": false
-        });
-        this.css({
-            "popup-hide": true
+            "popup-show": true
         });
 
-        this.position().y -= Math.random() * Popup.upMoveRange + Popup.upMoveRange / 4;
-        this.position().x += Math.random() * Popup.sideMoveRange - Popup.sideMoveRange / 2;
+        this.style({
+            left: this.position().x + "px",
+            top: this.position().y + "px"
+        });
 
-        this.position.notifySubscribers();
+        setTimeout(() => {
+            this.css({
+                "popup-hide": true
+            });
+
+            this.position().y -= Math.random() * Popup.upMoveRange + Popup.upMoveRange / 4;
+            this.position().x += Math.random() * Popup.sideMoveRange - Popup.sideMoveRange / 2;
+
+            this.style({
+                left: this.position().x + "px",
+                top: this.position().y + "px"
+            });
+        }, 100);
+
     }
 
 }
