@@ -25,7 +25,11 @@
 .popup-show, .popup-hide {
     position: absolute;
     transition: top 2s, left 2s, opacity 2s;
-    transition-timing-function: cubic-bezier(0, 0.44, 1, 1)
+    transition-timing-function: cubic-bezier(0, 0.44, 1, 1);
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
 }
 
 
