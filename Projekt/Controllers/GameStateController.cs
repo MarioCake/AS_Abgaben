@@ -2,16 +2,19 @@
 using CookiClickerEF.Models;
 using CookiClickerEF.Context;
 using Microsoft.AspNetCore.Mvc;
+using Projekt.Services;
 
 namespace Projekt.Controllers
 {
     public class GameStateController : Controller
     {
         private CookieClickerContext context;
+        private GameStateValidation validator;
 
         public GameStateController()
         {
             this.context = new CookieClickerContext();
+            this.validator = new GameStateValidation();
         }
 
         public JsonResult Get(int id)
@@ -26,7 +29,12 @@ namespace Projekt.Controllers
 
         public IActionResult Save(GameState state)
         {
-            state.Id;
+            if (!this.validator.AreUpgradesValid(state))
+            {
+                // TODO ErrorMessage
+                return View();
+            }
+
             this.context.Add(state);
             this.context.SaveChanges();
 

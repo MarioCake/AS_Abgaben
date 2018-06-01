@@ -1,22 +1,30 @@
 ﻿using System;
+using System.Linq;
 using CookiClickerEF.Models;
 using CookiClickerEF.Context;
+
 namespace Projekt.Services
 {
     public class GameStateValidation
     {
-        private 
+        private CookieClickerContext context;
+
         public GameStateValidation()
         {
             this.context = new CookieClickerContext();
         }
 
-        public bool CheckUpgradeValidation(GameState state)
+        public bool AreUpgradesValid(GameState state)
         {
-            this.context.Upgrades;
+            var UpgradeIds = state.Id;
 
-            this.context.
-            this.context.Ga
+            if (UpgradeIds == null) {
+                
+            }
+
+            this.context.Upgrades.Where((Upgrade upgrade) => UpgradeIds.Contains(upgrade.Id));
+
+            return false;
         }
     }
 }
