@@ -18,11 +18,11 @@ namespace Projekt.Services
         {
             var UpgradeIds = state.Id;
 
-            if (UpgradeIds == null) {
+            if (UpgradeIds == 0) {
                 
             }
 
-            this.context.Upgrades.Where((Upgrade upgrade) => UpgradeIds.Contains(upgrade.Id));
+            // this.context.Upgrades.Where((Upgrade upgrade) => UpgradeIds.Contains(upgrade.Id));
 
             return false;
         }

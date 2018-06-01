@@ -7,16 +7,16 @@ namespace Projekt.Controllers
 {
     public class UpgradeController : Controller
     {
-        private CookiClickerContext context;
+        private CookieClickerContext context;
 
         public UpgradeController()
         {
-            this.context = new CookiClickerContext();
+            this.context = new CookieClickerContext();
         }
 
         public IActionResult Get()
         {
-            this.context.Add(upgrade);
+            // this.context.Add(upgrade);
             this.context.SaveChanges();
 
             return View();
@@ -24,7 +24,7 @@ namespace Projekt.Controllers
 
         public IActionResult Get(int upgradeId)
         {
-            this.context.Upgrade.First;
+            // this.context.Upgrade.First;
             return View();
         }
     }
