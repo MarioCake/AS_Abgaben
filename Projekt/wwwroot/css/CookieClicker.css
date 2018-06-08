@@ -30,6 +30,10 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none;
+    color: rgb(219, 189, 11);
+    font-size: 15px;
+    text-shadow: -2px 0 rgb(103, 89, 4), 0 2px rgb(103, 89, 4), 2px 0 rgb(103, 89, 4), 0 -2px rgb(103, 89, 4);
+    font-weight: 900;
 }
 
 

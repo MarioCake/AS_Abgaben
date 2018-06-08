@@ -14,6 +14,13 @@ namespace CookiClickerEF.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        public int? ParentId { get; set; }
+        
         public DateTime CreatedAt { get; set; }
+
+        [ForeignKey(nameof(ParentId))]
+        public GameState Parent { get; set; }
+        
+        public List<GameStateUpgrade> GameStateUpgrades { get; set; }
     }
 }

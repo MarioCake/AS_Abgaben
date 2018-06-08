@@ -11,10 +11,18 @@ namespace CookiClickerEF.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=CookieClicker.db");
+            optionsBuilder.UseSqlite("Data Source=CookieClicker.db;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<GameStateUpgrade>()
+                .HasKey(model => new { model.UpgradeId, model.GameStateId });
+
         }
 
         public DbSet<GameState> GameStates { get; set; }
         public DbSet<Upgrade> Upgrades { get; set; }
+        public DbSet<GameStateUpgrade> GameStateUpgrades { get; set; }
     }
 }

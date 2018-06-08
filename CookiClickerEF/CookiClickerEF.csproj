@@ -7,6 +7,30 @@
   <ItemGroup>
     <Compile Remove="Migrations\20180529122539_GameState Id to identity.cs" />
     <Compile Remove="Migrations\20180529122539_GameState Id to identity.Designer.cs" />
+    <Compile Remove="Migrations\20180603190359_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603190359_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603190642_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603190642_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603191228_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603191228_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603191553_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603191553_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603192046_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603192046_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603192612_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603192612_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603193105_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603193105_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603193131_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603193131_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603193206_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603193206_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603193931_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603193931_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603194002_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603194002_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180603194056_Add GameStateUpgrade Model.cs" />
+    <Compile Remove="Migrations\20180603194056_Add GameStateUpgrade Model.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
