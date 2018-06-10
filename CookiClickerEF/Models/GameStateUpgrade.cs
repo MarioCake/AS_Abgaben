@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CookiClickerEF.Models
 {
-    [Table(nameof(GameStateUpgrade))]
+    [Table("GameUpgrade")]
     public class GameStateUpgrade
     {
         public int UpgradeId { get; set; }

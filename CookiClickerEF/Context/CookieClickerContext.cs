@@ -1,4 +1,6 @@
 ﻿using CookiClickerEF.Models;
+using FirebirdSql.Data.FirebirdClient;
+using FirebirdSql.EntityFrameworkCore.Firebird.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,7 +13,21 @@ namespace CookiClickerEF.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=CookieClicker.db;");
+            string clientLibrary = System.IO.Path.Combine(Environment.CurrentDirectory, "fbclient.dll");
+            FbConnectionStringBuilder builder = new FbConnectionStringBuilder
+            {
+                Database = "CookieClicker.fdb",
+                ClientLibrary = clientLibrary,
+                UserID = "sysdba",
+                Password = "masterkey",
+                ServerType = FbServerType.Embedded,
+                Charset = "UTF8"
+            };
+
+            FbConnection connection = new FbConnection(builder.ConnectionString);
+
+            optionsBuilder.UseFirebird(connection);
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

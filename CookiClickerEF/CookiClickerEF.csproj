@@ -5,32 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20180529122539_GameState Id to identity.cs" />
-    <Compile Remove="Migrations\20180529122539_GameState Id to identity.Designer.cs" />
-    <Compile Remove="Migrations\20180603190359_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603190359_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603190642_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603190642_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603191228_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603191228_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603191553_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603191553_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603192046_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603192046_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603192612_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603192612_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603193105_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603193105_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603193131_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603193131_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603193206_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603193206_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603193931_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603193931_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603194002_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603194002_Add GameStateUpgrade Model.Designer.cs" />
-    <Compile Remove="Migrations\20180603194056_Add GameStateUpgrade Model.cs" />
-    <Compile Remove="Migrations\20180603194056_Add GameStateUpgrade Model.Designer.cs" />
+    <Compile Remove="Migrations\20180610143750_Initial Migration.cs" />
+    <Compile Remove="Migrations\20180610143750_Initial Migration.Designer.cs" />
+    <Compile Remove="Migrations\20180610145434_Initial Migration.cs" />
+    <Compile Remove="Migrations\20180610145434_Initial Migration.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FirebirdSql.EntityFrameworkCore.Firebird" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
   </ItemGroup>
 
