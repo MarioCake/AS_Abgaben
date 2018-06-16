@@ -11,9 +11,10 @@ using System;
 namespace CookiClickerEF.Migrations
 {
     [DbContext(typeof(CookieClickerContext))]
-    partial class CookieClickerContextModelSnapshot : ModelSnapshot
+    [Migration("20180616103439_Add money system to models")]
+    partial class Addmoneysystemtomodels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -19,6 +19,7 @@ namespace CookiClickerEF.Context
         {
             modelBuilder.Entity<GameStateUpgrade>()
                 .HasKey(model => new { model.UpgradeId, model.GameStateId });
+            
         }
 
         public DbSet<GameState> GameStates { get; set; }
