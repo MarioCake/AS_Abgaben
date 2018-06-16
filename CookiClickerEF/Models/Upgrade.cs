@@ -12,6 +12,8 @@ namespace CookiClickerEF.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         
+        public int Price { get; set; }
+
         public int? DependencyId { get; set; }
 
         [ForeignKey(nameof(DependencyId))]

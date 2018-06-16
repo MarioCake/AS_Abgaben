@@ -13,6 +13,8 @@ namespace CookiClickerEF.Models
         public int UpgradeId { get; set; }
 
         public int GameStateId { get; set; }
+
+        public int Amount { get; set; }
         
         public GameState GameState { get; set; }
         

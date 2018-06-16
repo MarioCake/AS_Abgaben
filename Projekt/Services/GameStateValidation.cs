@@ -2,16 +2,17 @@
 using System.Linq;
 using CookiClickerEF.Models;
 using CookiClickerEF.Context;
+using Projekt.Controllers;
 
 namespace Projekt.Services
 {
     public class GameStateValidation
     {
-        private CookieClickerContext context;
+        protected readonly CookieClickerContext _context;
 
-        public GameStateValidation()
+        public GameStateValidation(CookieClickerContext context)
         {
-            this.context = new CookieClickerContext();
+            this._context = context;
         }
 
         public bool AreUpgradesValid(GameState state)

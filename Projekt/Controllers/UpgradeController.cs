@@ -5,19 +5,17 @@ using CookiClickerEF.Context;
 
 namespace Projekt.Controllers
 {
-    public class UpgradeController : Controller
+    public class UpgradeController : BaseController
     {
-        private CookieClickerContext context;
 
-        public UpgradeController()
+        public UpgradeController(CookieClickerContext context) : base(context)
         {
-            this.context = new CookieClickerContext();
         }
 
         public IActionResult Get()
         {
             // this.context.Add(upgrade);
-            this.context.SaveChanges();
+            this._context.SaveChanges();
 
             return View();
         }
