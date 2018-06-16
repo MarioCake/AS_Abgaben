@@ -10,8 +10,10 @@ using Projekt.Models;
 
 namespace Projekt.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        public HomeController(CookieClickerContext context) : base(context) { }
+
         public IActionResult Index()
         {
             return View();

@@ -14,6 +14,8 @@ namespace CookiClickerEF.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        public int Money { get; set; }
+
         public int? ParentId { get; set; }
         
         public DateTime CreatedAt { get; set; }

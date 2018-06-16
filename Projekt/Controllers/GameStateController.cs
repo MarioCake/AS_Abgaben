@@ -6,37 +6,35 @@ using Projekt.Services;
 
 namespace Projekt.Controllers
 {
-    public class GameStateController : Controller
+    public class GameStateController : BaseController
     {
-        private CookieClickerContext context;
-        private GameStateValidation validator;
+        private readonly GameStateValidation _validator;
 
-        public GameStateController()
+        public GameStateController(CookieClickerContext context, GameStateValidation validator) : base(context)
         {
-            this.context = new CookieClickerContext();
-            this.validator = new GameStateValidation();
+            _validator = validator;
         }
 
         public JsonResult Get(int id)
         {
-            return Json(this.context.GameStates.First((GameState arg) => arg.Id == id));
+            return Json(this._context.GameStates.First((GameState arg) => arg.Id == id));
         }
 
         public JsonResult GetLast()
         {
-            return Json(this.context.GameStates.OrderByDescending((GameState arg) => arg.CreatedAt).FirstOrDefault());
+            return Json(this._context.GameStates.OrderByDescending((GameState arg) => arg.CreatedAt).FirstOrDefault());
         }
 
         public IActionResult Save(GameState state)
         {
-            if (!this.validator.AreUpgradesValid(state))
+            if (!this._validator.AreUpgradesValid(state))
             {
                 // TODO ErrorMessage
                 return View();
             }
 
-            this.context.Add(state);
-            this.context.SaveChanges();
+            this._context.Add(state);
+            this._context.SaveChanges();
 
             return View();
         }
