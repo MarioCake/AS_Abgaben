@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CookiClickerEF.Context;
 using CookiClickerEF.Models;
+using CookiClickerEF.Models.Transaction;
 using Microsoft.AspNetCore.Mvc;
 using Projekt.Models;
 

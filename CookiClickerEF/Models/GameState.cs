@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace CookiClickerEF.Models
 {
     [Table("Game")]
-    public class GameState
+    public class GameStateData
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -21,8 +21,8 @@ namespace CookiClickerEF.Models
         public DateTime CreatedAt { get; set; }
 
         [ForeignKey(nameof(ParentId))]
-        public GameState Parent { get; set; }
+        public GameStateData Parent { get; set; }
         
-        public List<GameStateUpgrade> GameStateUpgrades { get; set; }
+        public List<GameStateUpgradeData> GameStateUpgrades { get; set; }
     }
 }

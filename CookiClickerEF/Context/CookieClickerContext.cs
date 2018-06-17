@@ -17,13 +17,19 @@ namespace CookiClickerEF.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<GameStateUpgrade>()
+            modelBuilder.Entity<GameStateUpgradeData>()
                 .HasKey(model => new { model.UpgradeId, model.GameStateId });
+
+            modelBuilder.Entity<UpgradeData>().HasData(
+                new UpgradeData() { Id = 1, Name = "Pointer", FileName = "upgrades/pointer.png", Price = 25, ActiveAddition = 1 },
+                new UpgradeData() { Id = 2, Name = "V-Bucks Generator", FileName = "upgrades/vbucks.png", Price = 100, PassiveAddition = 1 },
+                new UpgradeData() { Id = 3, Name = "Grandma", FileName = "upgrades/grandma.png", Price = 450, PassiveAddition = 5 }
+            );
             
         }
 
-        public DbSet<GameState> GameStates { get; set; }
-        public DbSet<Upgrade> Upgrades { get; set; }
-        public DbSet<GameStateUpgrade> GameStateUpgrades { get; set; }
+        public DbSet<GameStateData> GameStates { get; set; }
+        public DbSet<UpgradeData> Upgrades { get; set; }
+        public DbSet<GameStateUpgradeData> GameStateUpgrades { get; set; }
     }
 }

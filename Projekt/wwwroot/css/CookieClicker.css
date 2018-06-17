@@ -13,14 +13,29 @@
     text-align: center;
 }
 
-.cookie{
+.cookie-amount {
+    font-size: 30px;
+    user-select: none;
+    text-shadow: -2px 0 rgb(91, 0, 0), 0 2px rgb(91, 0, 0), 2px 0 rgb(91, 0, 0), 0 -2px rgb(91, 0, 0);
+    color: rgb(200, 100, 100);
+}
+
+.cookie {
     border-radius: 50%;
     width: 250px;
     height: 250px;
-    background-color: sandybrown;
     cursor: pointer;
     position: relative;
+    background-image: url('/images/cookie.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
+
+    .cookie:active {
+        transform: scale(0.95);
+    }
+
 
 .popup-show, .popup-hide {
     position: absolute;

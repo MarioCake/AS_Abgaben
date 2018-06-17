@@ -1,16 +1,25 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<!-- ko ifnot: gameState() === null -->
 <div class="cookie-wrapper">
-    <div class="cookie-amount" data-bind="text: amountCookies"></div>
+    <div class="cookie-amount" data-bind="text: gameState().money"></div>
     <div class="cookie" data-bind="click: addCookie">
         <div class="popups" data-bind="foreach: popups">
             <div data-bind="css: css, text: text, style: style"></div>
         </div>
     </div>
-
 </div>
+
+<div class="upgrade-wrapper" data-bind="foreach: gameState().upgrades">
+    <div class="upgrade">
+        <img data-bind="attr: { src: '/images/' + fileName() }" />
+        <p data-bind="text: name"></p>
+        <p data-bind="text: price"></p>
+    </div>
+</div>
+<!-- /ko -->
+
 
 @section scripts{
     <script>

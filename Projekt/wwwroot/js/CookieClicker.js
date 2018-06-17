@@ -3,8 +3,15 @@
     constructor(amountCookies = 0) {
         super();
 
-        this.amountCookies = ko.observable(amountCookies);
-        this.cookieClickAmount = 1;
+        this.gameState = ko.observable(null);
+
+        $.ajax({
+            url: "/GameState/GetLast",
+            method: "GET",
+            success: function (gameState) {
+                this.gameState(ko.mapping.fromJS(gameState));
+            }
+        });
 
         this.popups = ko.observableArray([]);
     }
