@@ -4,12 +4,14 @@
         super();
 
         this.gameState = ko.observable(null);
+        self = this;
 
         $.ajax({
             url: "/GameState/GetLast",
             method: "GET",
             success: function (gameState) {
-                this.gameState(ko.mapping.fromJS(gameState));
+                console.log(gameState)
+                self.gameState(ko.mapping.fromJS(gameState));
             }
         });
 
@@ -17,12 +19,16 @@
     }
 
     addCookie() {
-        this.amountCookies(this.amountCookies() + this.cookieClickAmount);
+        this.gameState().money(this.gameState().money() + this.gameState().clickAmount());
 
-        let newPopup = new Popup(this.cookieClickAmount + "+", { x: 0, y: 0 }, { x: 200, y: 200 });
+        let newPopup = new Popup(this.gameState().clickAmount() + "+", { x: 0, y: 50 }, { x: 200, y: 250 });
         
         this.popups.push(newPopup);
 
         setTimeout(this.popups.remove.bind(this.popups, newPopup), 2000);
+    }
+
+    saveGameState() {
+
     }
 }

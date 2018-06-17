@@ -1,17 +1,14 @@
 ﻿using CookiClickerEF.Models;
-using FirebirdSql.Data.FirebirdClient;
-using FirebirdSql.EntityFrameworkCore.Firebird.Extensions;
+
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CookiClickerEF.Context
 {
     public class CookieClickerContext : DbContext
     {
-        public CookieClickerContext(DbContextOptions<CookieClickerContext> options): base(options)
+        public CookieClickerContext(DbContextOptions<CookieClickerContext> options)
+            : base(options)
         {
         }
 
@@ -25,7 +22,11 @@ namespace CookiClickerEF.Context
                 new UpgradeData() { Id = 2, Name = "V-Bucks Generator", FileName = "upgrades/vbucks.png", Price = 100, PassiveAddition = 1 },
                 new UpgradeData() { Id = 3, Name = "Grandma", FileName = "upgrades/grandma.png", Price = 450, PassiveAddition = 5 }
             );
-            
+
+            modelBuilder.Entity<GameStateData>().HasData(
+                new GameStateData() { Id = 1, Money = 0, CreatedAt = DateTime.Now }
+            );
+
         }
 
         public DbSet<GameStateData> GameStates { get; set; }

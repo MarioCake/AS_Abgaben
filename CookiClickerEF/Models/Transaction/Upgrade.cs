@@ -8,6 +8,9 @@ namespace CookiClickerEF.Models.Transaction
 {
     public class Upgrade
     {
+        [JsonProperty("id")]
+        public int Id { get; set; }
+
         [JsonProperty("name")]
         public string Name { get; set; }
 
@@ -23,18 +26,23 @@ namespace CookiClickerEF.Models.Transaction
         [JsonProperty("price")]
         public int Price { get; set; }
 
-        public static explicit operator Upgrade(UpgradeData other)
+        [JsonProperty("amount")]
+        public int Amount { get; set; }
+
+        public static explicit operator Upgrade(GameStateUpgradeData other)
         {
-            if (other == null)
+            if (other == null || other.Upgrade == null)
                 return null;
 
             return new Upgrade()
             {
-                Name = other.Name,
-                FileName = other.FileName,
-                ActiveAddition = other.ActiveAddition,
-                PassiveAddition = other.PassiveAddition,
-                Price = other.Price
+                Id = other.UpgradeId,
+                Name = other.Upgrade.Name,
+                FileName = other.Upgrade.FileName,
+                ActiveAddition = other.Upgrade.ActiveAddition,
+                PassiveAddition = other.Upgrade.PassiveAddition,
+                Price = other.Upgrade.Price,
+                Amount = other.Amount
             };
         }
     }

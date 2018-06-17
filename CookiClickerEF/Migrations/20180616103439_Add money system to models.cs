@@ -11,17 +11,20 @@ namespace CookiClickerEF.Migrations
             migrationBuilder.AddColumn<int>(
                 name: "Price",
                 table: "Upgrade",
-                nullable: false);
+                nullable: false,
+                defaultValue: 0);
 
             migrationBuilder.AddColumn<int>(
                 name: "Amount",
                 table: "GameUpgrade",
-                nullable: false);
+                nullable: false,
+                defaultValue: 0);
 
             migrationBuilder.AddColumn<int>(
                 name: "Money",
                 table: "Game",
-                nullable: false);
+                nullable: false,
+                defaultValue: 0);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

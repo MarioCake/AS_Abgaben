@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CookiClickerEF.Context;
-using FirebirdSql.Data.FirebirdClient;
-using FirebirdSql.EntityFrameworkCore.Firebird.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Projekt.Services;
@@ -27,20 +26,7 @@ namespace Projekt
         {
             services.AddDbContext<CookieClickerContext>(options =>
             {
-                string clientLibrary = System.IO.Path.Combine(Environment.CurrentDirectory, "fbclient.dll");
-                FbConnectionStringBuilder builder = new FbConnectionStringBuilder
-                {
-                    Database = "CookieClicker.fdb",
-                    ClientLibrary = clientLibrary,
-                    UserID = "sysdba",
-                    Password = "masterkey",
-                    ServerType = FbServerType.Embedded,
-                    Charset = "UTF8"
-                };
-
-                FbConnection connection = new FbConnection(builder.ConnectionString);
-
-                options.UseFirebird(connection);
+                options.UseSqlite("Data Source = CookieClicker.db");
             });
 
             services.AddScoped<GameStateValidation>();

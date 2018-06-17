@@ -18,12 +18,11 @@ namespace Projekt.Controllers
             _validator = validator;
         }
 
-        private List<UpgradeData> GetAllUpgrades(GameStateData state)
+        private List<GameStateUpgradeData> GetAllUpgrades(GameStateData state)
         {
-            List<UpgradeData> upgrades = this._context.GameStateUpgrades
+            List<GameStateUpgradeData> upgrades = this._context.GameStateUpgrades
                 .Where(model => model.GameStateId == state.Id)
-                .Include(model => model.Upgrade)
-                .Select(model => model.Upgrade).ToList();
+                .Include(model => model.Upgrade).ToList();
 
             if (state.ParentId != null)
             {
@@ -40,9 +39,18 @@ namespace Projekt.Controllers
             GameStateData stateData = this._context.GameStates.AsNoTracking()
                 .First((GameStateData arg) => arg.Id == id);
 
-            GameState state = (GameState)stateData;
 
-            state.Upgrades.AddRange(GetAllUpgrades(stateData).ConvertAll(upgradeData => (Upgrade)upgradeData));
+            List<GameStateUpgradeData> allUpgrades = GetAllUpgrades(stateData);
+
+            allUpgrades = allUpgrades.GroupBy(model => model.Upgrade.Id).Select(groupedStateUpgrades => new GameStateUpgradeData()
+            {
+                Upgrade = groupedStateUpgrades.First().Upgrade,
+                Amount = groupedStateUpgrades.Sum(gsu => gsu.Amount)
+            }).ToList();
+
+            stateData.GameStateUpgrades = allUpgrades;
+
+            GameState state = (GameState)stateData;
 
 
             return Json(state);
