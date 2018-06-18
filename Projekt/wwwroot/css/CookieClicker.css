@@ -30,12 +30,22 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    filter: grayscale(0.3) blur(0.9px) sepia(100%);
 }
 
-    .cookie:active {
-        transform: scale(0.95);
-    }
+.cookie:active {
+    transform: scale(0.95);
+}
 
+.title-wrapper {
+    border: 10px ;
+}
+
+.title {
+    text-align: center;
+    font-size: large;
+    background-color: azure;
+}
 
 .popup-show, .popup-hide {
     position: absolute;
