@@ -30,7 +30,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    filter: grayscale(0.3) blur(0.9px) sepia(100%);
 }
 
 .cookie:active {
@@ -38,13 +37,15 @@
 }
 
 .title-wrapper {
-    border: 10px ;
 }
 
 .title {
+    color: rgb(2, 0, 217);
     text-align: center;
-    font-size: large;
-    background-color: azure;
+    font-size: 36px;
+    text-shadow: -2px 0 rgb(2, 0, 117), 0 2px rgb(2, 0, 117), 2px 0 rgb(2, 0, 117), 0 -2px rgb(2, 0, 117);
+    font-weight: 900;
+    margin-bottom: 25px;
 }
 
 .popup-show, .popup-hide {
