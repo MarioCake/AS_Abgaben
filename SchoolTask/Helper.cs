@@ -8,6 +8,7 @@ namespace School
 {
     public static class Helper
     {
+        private static Random random = new Random((int)DateTime.Now.Ticks);
 
         public static T[] GetArrayOf<T>(int amount, ActionForEachValue<T> actionForEachValue = null, TryParse<T> tryParse = null, Predicate<T> validationFunction = null, string errorMessage = null)
         {
@@ -77,5 +78,19 @@ namespace School
                     method.GetParameters()[0].ParameterType == typeof(string) &&
                     method.GetParameters()[1].ParameterType == Type.GetType(typeof(T).FullName + "&")).Single();
         }
+
+        public static T RandomEnumValue<T>()
+        {
+            Array enumValues = Enum.GetValues(typeof(T));
+            return (T)enumValues.GetValue(random.Next(enumValues.Length));
+        }
+
+        public static bool RandomBool(double probability = 0.5)
+        {
+            double randomValue = random.NextDouble();
+
+            return randomValue < probability;
+        }
+
     }
 }
