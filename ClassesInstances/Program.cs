@@ -78,7 +78,12 @@ namespace ClassesInstances
          *  Objekts beziehen kann und direkt dieses Objekt verändern kann.
          *  Dabei hat jeder Aufruf nicht unbedingt immer die gleiche Ausgabe oder
          *  funktionalität.
-         * 
+         *  
+         *  Statische Methoden sind beispielhaft:
+         *      System.IO.Directory.GetDirectories()
+         *      System.IO.File.ReadAllText()
+         *      System.Console.WriteLine()
+         *  
          */
     }
 }
