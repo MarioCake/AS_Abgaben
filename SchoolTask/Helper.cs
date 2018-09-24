@@ -51,11 +51,20 @@ namespace School
                 validationFunction = variable => true;
 
             if (tryParse == null)
-            {
-                MethodInfo tryParseMethod = GetTryParse<T>();
+                if(typeof(T) != typeof(string))
+                {
+                    MethodInfo tryParseMethod = GetTryParse<T>();
 
-                tryParse = (TryParse<T>)Delegate.CreateDelegate(typeof(TryParse<T>), tryParseMethod);
-            }
+                    tryParse = (TryParse<T>)Delegate.CreateDelegate(typeof(TryParse<T>), tryParseMethod);
+                }
+                else
+                {
+                    tryParse = (string parseInput, out T parseOutput) =>
+                    {
+                        parseOutput = (T)(object)parseInput;
+                        return true;
+                    };
+                }
             if (tryParse(input, out output) && validationFunction(output))
                 return true;
 

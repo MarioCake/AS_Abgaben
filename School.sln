@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CallByValueReference", "Cal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesInstances", "ClassesInstances\ClassesInstances.csproj", "{958B4BB6-E78D-4437-93AF-0C9BD3CBD303}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursiveMethods", "RecursiveMethods\RecursiveMethods.csproj", "{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{958B4BB6-E78D-4437-93AF-0C9BD3CBD303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{958B4BB6-E78D-4437-93AF-0C9BD3CBD303}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{958B4BB6-E78D-4437-93AF-0C9BD3CBD303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
