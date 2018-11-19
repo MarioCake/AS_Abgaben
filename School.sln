@@ -31,9 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodenErstellung", "Metho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CallByValueReference", "CallByValueReference\CallByValueReference.csproj", "{5ACDDDC6-1469-4DBC-95D1-433DFAAD03EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesInstances", "ClassesInstances\ClassesInstances.csproj", "{958B4BB6-E78D-4437-93AF-0C9BD3CBD303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassesInstances", "ClassesInstances\ClassesInstances.csproj", "{958B4BB6-E78D-4437-93AF-0C9BD3CBD303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursiveMethods", "RecursiveMethods\RecursiveMethods.csproj", "{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursiveMethods", "RecursiveMethods\RecursiveMethods.csproj", "{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmlDiagrams", "UmlDiagrams\UmlDiagrams.csproj", "{5CDC7D0D-D993-4373-8B22-78676608892C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20D0FAAD-7E0A-47C2-B0CC-57F0360C6909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDC7D0D-D993-4373-8B22-78676608892C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDC7D0D-D993-4373-8B22-78676608892C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDC7D0D-D993-4373-8B22-78676608892C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDC7D0D-D993-4373-8B22-78676608892C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
