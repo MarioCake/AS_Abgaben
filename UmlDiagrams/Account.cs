@@ -16,7 +16,9 @@ namespace UmlDiagrams
         public string MobilePhone { get; private set; }
         public string EmailAddress { get; private set; }
         public string Password { get; private set; }
-        private string PasswordPlaintext { get; set; }
+
+        private string plainPasword;
+        private string PasswordPlaintext { get { return plainPasword; } set { plainPasword = value; EncodePassword(); } }
 
         public Account(): this("", "") { }
         public Account(string email, string password, string forename = null, string lastname = null, string city = null, string street = null, string zipcode = null, string phone = null, string mobilephone = null) {

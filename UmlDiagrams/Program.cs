@@ -24,6 +24,10 @@ namespace UmlDiagrams
             Console.WriteLine("Account 2 Password Hash: {0}", account2.Password);
             account3.EncodePassword();
             Console.WriteLine("Account 3 Password Hash: {0}", account3.Password);
+
+            Call(account1);
+            Call(account2);
+            Call(account3);
         }
 
         public static void Call(Account account)
