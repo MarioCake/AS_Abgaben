@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -22,7 +23,7 @@ namespace UmlDiagrams
 
         public Account(): this("", "") { }
         public Account(string email, string password, string forename = null, string lastname = null, string city = null, string street = null, string zipcode = null, string phone = null, string mobilephone = null) {
-            Forename = forename;
+            Forename = forename; 
             LastName = lastname;
             ZipCode = zipcode;
             Street = street;

@@ -3,7 +3,7 @@
   <Class Name="UmlDiagrams.Account">
     <Position X="8.5" Y="1.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAIAAABAAAAAgAAAEATAAMAIgAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAABAAAAAgAAAEETAAMAIgAAAAg=</HashCode>
       <FileName>Account.cs</FileName>
     </TypeIdentifier>
   </Class>
