@@ -1,8 +1,8 @@
-﻿using StarSim.EngineTypes;
+﻿using System;
+using System.Collections.Generic;
+using StarSim.EngineTypes;
 using StarSim.LoadTypes;
 using StarSim.ShipTypes;
-using System;
-using System.Collections.Generic;
 
 namespace StarSim
 {
@@ -19,7 +19,7 @@ namespace StarSim
                 new ToolMaterial("Condoms", 10000)
             };
 
-            Ship funterprise = new Enterprise(new Sol8(), new Capitan("Helene Fisher", "Singer"));
+            Ship funterprise = new Enterprise(new Sol8(), new Capitan("Helene Fischer", "Singer"));
             funterprise.AddLoad(funterpriseLoad);
 
             List<Load> boringCarrierLoad = new List<Load>
@@ -29,7 +29,7 @@ namespace StarSim
                 new Fuel("Stardustpowder", 100000)
             };
 
-            Ship boringCarrier = new StarCarrier(new Warp4(), new Capitan("Patrick Fiedler", "Lehrer"));
+            Ship boringCarrier = new StarCarrier(new Warp4(), new Capitan("Patrick Fiedler", "Referendar"));
             boringCarrier.AddLoad(boringCarrierLoad);
 
             if(!funterprise.TransferLoad(boringCarrier, funterprise.Load[1]))
